@@ -1,0 +1,14 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "uri": "mongodb://translate-admin:admin@test-translation-shard-00-00-pamli.mongodb.net:27017,test-translation-shard-00-01-pamli.mongodb.net:27017,test-translation-shard-00-02-pamli.mongodb.net:27017/test?ssl=true&replicaSet=test-translation-shard-0&authSource=admin&retryWrites=true&w=majority"
+      },
+      "options": {
+        "ssl": true
+      }
+    }
+  }
+}

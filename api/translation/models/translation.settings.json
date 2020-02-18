@@ -1,0 +1,52 @@
+{
+  "connection": "default",
+  "collectionName": "translations",
+  "info": {
+    "name": "translation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "translationKey": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "en": {
+      "type": "string",
+      "required": true
+    },
+    "sv": {
+      "type": "string",
+      "required": false
+    },
+    "no": {
+      "type": "string"
+    },
+    "view": {
+      "type": "enumeration",
+      "enum": [
+        "generic",
+        "frontPage",
+        "venuePage",
+        "checkoutPage",
+        "mobile"
+      ],
+      "required": true,
+      "default": "generic"
+    },
+    "group": {
+      "type": "enumeration",
+      "enum": [
+        "Meetingpackage",
+        "Scandic",
+        "Nch",
+        "Radisson"
+      ],
+      "default": "Meetingpackage",
+      "required": true
+    }
+  }
+}
