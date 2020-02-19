@@ -5,7 +5,7 @@
       "path": "/translations",
       "handler": "translation.find",
       "config": {
-        "policies": []
+        "policies": ["global.isSameGroup"]
       }
     },
     {
@@ -13,7 +13,7 @@
       "path": "/translations/count",
       "handler": "translation.count",
       "config": {
-        "policies": []
+        "policies": ["global.isSameGroup"]
       }
     },
     {
@@ -21,7 +21,7 @@
       "path": "/translations/:id",
       "handler": "translation.findOne",
       "config": {
-        "policies": []
+        "policies": ["global.isSameGroup"]
       }
     },
     {
@@ -29,7 +29,7 @@
       "path": "/translations",
       "handler": "translation.create",
       "config": {
-        "policies": []
+        "policies": ["global.isSameGroup"]
       }
     },
     {
@@ -37,7 +37,7 @@
       "path": "/translations/:id",
       "handler": "translation.update",
       "config": {
-        "policies": []
+        "policies": ["global.isSameGroup"]
       }
     },
     {
@@ -45,7 +45,7 @@
       "path": "/translations/:id",
       "handler": "translation.delete",
       "config": {
-        "policies": []
+        "policies": ["global.isSameGroup"]
       }
     }
   ]
