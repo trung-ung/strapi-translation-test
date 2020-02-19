@@ -1,5 +1,10 @@
 module.exports = async (ctx, next) => {
   // for GET request, group comes from query
+  // if group is undefined in query, set group to user role name
+  if (!ctx.request.query.group) {
+    ctx.request.query.group = ctx.state.user.role.name
+    return await next()
+  }
   if (ctx.request.query.group === ctx.state.user.role.name) {
     return await next()
   }
